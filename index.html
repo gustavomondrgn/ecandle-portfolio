@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Roc Grotesk -->
+
+    <link rel="stylesheet" href="https://use.typekit.net/ugc4jod.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CMB1EK7L7D"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-CMB1EK7L7D");
+    </script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/js/pace.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+    <link
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link rel="shortcut icon" href="img/icon-footer.svg" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/pattern.css" />
+
+    <title>Ecandle Studio</title>
+  </head>
+  <body>
+    <div id="preloader">
+      <div class="p">ECANDLE STUDIO</div>
+    </div>
+
+    <script>
+      paceOptions = {
+        ajax: true,
+        document: true,
+        eventLag: false,
+      };
+
+      Pace.on("done", function () {
+        $(".p")
+          .delay(500)
+          .animate(
+            { top: "30%", opacity: "0" },
+            3000,
+            $.bez([0.19, 1, 0.22, 1])
+          );
+
+        $("#preloader")
+          .delay(1500)
+          .animate({ top: "-100%" }, 2000, $.bez([0.19, 1, 0.22, 1]));
+
+        TweenMax.from(".title", 2, {
+          delay: 1.8,
+          y: 10,
+          opacity: 0,
+          ease: Expo.easeInOut,
+        });
+      });
+    </script>
+
+    <!-- Header -->
+
+    <header class="header" id="header">
+      <div class="header-container">
+        <div class="box-logo">
+          <a href="https://ecandle.com.br/">
+            <img
+              class="logo-ecandle"
+              src="img/logo-ecandle.svg"
+              alt="logo-ecandle"
+            />
+          </a>
+        </div>
+
+        <div class="menu-burger active">
+          <img src="img/menu-burger.svg" alt="menu" />
+        </div>
+
+        <ul class="nav-menu">
+          <!-- <li>
+                    <a onclick="playsong()" ondblclick="pausesong()">
+                        <?xml version="1.0" encoding="UTF-8"?>
+                    
+                        <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                            <path d="M6.54086 26.4339C6.2633 25.1848 7.21374 24 8.49323 24H39.5068C40.7863 24 41.7367 25.1848 41.4591 26.4339L38.348 40.4339C38.1447 41.3489 37.3331 42 36.3957 42H11.6043C10.6669 42 9.85532 41.3489 9.65197 40.4339L6.54086 26.4339Z" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+                            <path d="M20.643 9.88858C22.0743 8.00815 23.1776 5.41033 23.774 4C24.8177 5.41033 27.084 8.94836 27.7997 10.8288C28.6942 13.1793 26.4578 16 23.774 16C21.0903 16 18.8538 12.2391 20.643 9.88858Z" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+                            <path d="M24 16V24" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li> -->
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+
+         <li>
+            <ul class="translate" id="translate">
+                <li
+                  class="lang-item lang-item-4 lang-item-pt current-lang lang-item-first"
+                >
+                  <a class="translate-pt-br" lang="pt-BR" hreflang="pt-BR" href="https://ecandle.com.br/"
+                    ><img
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAn1BMVEUAYQAAWwAAUgAARwAAOgAALgAAIwB/voB4uni242pttG1kr2Rdq11RpFEAGAD9/Uv8/VT690U/mz83lTguki4ADQCp2lJ3d+Q+dfpkaun47zii1B9IoEhgslHOy6fZ5virw/Iubfhsc6v29iMfih+Wy3Nbg+lzm/m61vd+oNr08hZ2uDcAAQCPlLSuraIzmA8yjzKw3z8nXvcTgxM1pTDYD/UeAAAAfUlEQVR4AUWIA3oFMBCE/4mT2nbvf6biQ91n27tjAaDNi7gaFuLAIexiUDc6QKUfhKaVva5Dh/Xu3rwrqYPTzfeYVNvrRvUiUUbvO5hIVR0f8f7TYCo797+6POgOqtm9n8nGQ1qP/395v7cHw4FsQohnXhE3DOSQSETOmN8EHiUfBxs2q7sAAAAASUVORK5CYII="
+                      alt="PT"
+                      width="16"
+                      height="11"
+                      style="width: 16px; height: 11px"
+                    /><span style="margin-left: 0.3em">PT</span></a
+                  >
+                </li>
+                <li class="lang-item lang-item-6 lang-item-en">
+                  <a lang="en-US" hreflang="en-US" href="https://ecandle.com.br/en/"
+                    ><img
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAmVBMVEViZsViZMJiYrf9gnL8eWrlYkjgYkjZYkj8/PujwPybvPz4+PetraBEgfo+fvo3efkydfkqcvj8Y2T8UlL8Q0P8MzP9k4Hz8/Lu7u4DdPj9/VrKysI9fPoDc/EAZ7z7IiLHYkjp6ekCcOTk5OIASbfY/v21takAJrT5Dg6sYkjc3Nn94t2RkYD+y8KeYkjs/v7l5fz0dF22YkjWvcOLAAAAgElEQVR4AR2KNULFQBgGZ5J13KGGKvc/Cw1uPe62eb9+Jr1EUBFHSgxxjP2Eca6AfUSfVlUfBvm1Ui1bqafctqMndNkXpb01h5TLx4b6TIXgwOCHfjv+/Pz+5vPRw7txGWT2h6yO0/GaYltIp5PT1dEpLNPL/SdWjYjAAZtvRPgHJX4Xio+DSrkAAAAASUVORK5CYII="
+                      alt="EN"
+                      width="16"
+                      height="11"
+                      style="width: 16px; height: 11px"
+                    /><span style="margin-left: 0.3em">EN</span></a
+                  >
+                </li>
+              </ul>
+         </li>
+
+        </ul>
+      </div>
+    </header>
+
+    <!-- Hero -->
+
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="elipse"></div>
+          <div class="hat">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="5.58594"
+                y="0.173828"
+                width="7.90014"
+                height="7.90014"
+                transform="rotate(45 5.58594 0.173828)"
+                fill="url(#paint0_radial_1408_6)"
+              />
+              <defs>
+                <radialGradient
+                  id="paint0_radial_1408_6"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientUnits="userSpaceOnUse"
+                  gradientTransform="translate(6.04089 -1.93315) rotate(61.1892) scale(12.5694)"
+                >
+                  <stop stop-color="#FD6051" />
+                  <stop offset="1" stop-color="#D04436" />
+                </radialGradient>
+              </defs>
+            </svg>
+            <p class="agenda"><strong>SET/2022</strong> | 1 VAGA DISPONÍVEL</p>
+          </div>
+          <h1>Gustavo Henrique</h1>
+          <h2>Crio sites únicos</h2>
+          <p class="last-tittle">
+            Únicos, belos, profissionais, impactantes<br> e que geram resultados, de verdade.
+          </p>
+          <div class="btn-cta">
+            <a target="_blank" href="http://wa.me/5531993818528"
+              >Entrar em contato
+              <i class="ri-arrow-right-up-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nova seção portfólio -->
+
+    <!-- <section id="novo-portfolio" class="novo-portfolio">
+        <div class="novo-p">
+            <div class="novo-p-box left">
+                <div class="novo-p-box-left">
+                    <div class="p-item tag">
+                        Landing page
+                    </div>
+                    <div class="p-item project-name">
+                        Tudo fine
+                    </div>
+                    <div class="p-item project-descript">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellendus vel neque iure aut, eligendi aliquid vero facilis, quia repellat.
+                    </div>
+                    <a href="#" target="_blank" class="p-item">
+                        VER PROJETO
+                    </a>
+                </div>
+            </div>
+
+            <div class="novo-p-box right bg-right">
+
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Portfólio -->
+
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="portfolio-content">
+          <h1 class="section-title">Projetos selecionados</h1>
+          <p>Clique na imagem para ver o projeto completo.</p>
+          <!-- <div class="jobs">
+                    <img src="img/jobs/job_01.svg">
+                    <img src="img/jobs/job_02.svg">
+                    <img src="img/jobs/job_03.svg">
+                    <img src="img/jobs/job_04.svg">
+                    <img src="img/jobs/job_05.svg">
+                    <img src="img/jobs/job_06.svg">
+                    <img src="img/jobs/job_07.svg">
+                </div> -->
+
+          <a
+            target="_blank"
+            class="job-img-1"
+            href="https://lp.tudofine.com.br/"
+          >
+            <img src="img/jobs-imgs/job1.webp" />
+          </a>
+
+          <!-- Novos -->
+
+          <a
+            target="_blank"
+            class="job-ecandle"
+            href="https://www.figma.com/proto/q0DLQxtmoJp8woHETyNYq0/Proposta-Comercial---Gustavo?node-id=1190%3A1549&scaling=min-zoom&page-id=432%3A3"
+          >
+            <img src="img/jobs-imgs/ecandle.png" />
+          </a>
+
+          <a target="_blank" class="job-tiger" href="https://tigerkinginu.io/">
+            <img src="/img/jobs-imgs/tiger.png" />
+          </a>
+
+          <a
+            target="_blank"
+            class="job-gordices"
+            href="https://www.figma.com/proto/F2jpAqSVgcliPnAeB3uldn/Mah?node-id=128%3A31&scaling=min-zoom&page-id=0%3A1"
+          >
+            <img src="img/jobs-imgs/gordices.png" />
+          </a>
+
+          <a
+            target="_blank"
+            class="job-phyto"
+            href="https://www.figma.com/proto/voJiiEULg7bSqmLgP5Nnzn/Phyto-burning?node-id=9%3A232&scaling=min-zoom&page-id=0%3A1"
+          >
+            <img src="img/jobs-imgs/phyto.png" />
+          </a>
+
+          <a
+            target="_blank"
+            class="job-bebop"
+            href="https://www.figma.com/proto/yZQUbWrUv2TLvTdukPVq1i/Comboy-Bebop?node-id=3%3A2&scaling=min-zoom&page-id=0%3A1"
+          >
+            <img src="img/jobs-imgs/bebop.png" />
+          </a>
+
+          <!-- <a href="#">
+                    <img src="img/jobs-imgs/job2.png">
+                </a> -->
+
+          <a
+            target="_blank"
+            class="job-img-3"
+            href="https://www.figma.com/proto/vYKxvgsqrLydcNVgetfwmU/%5BRemake%5D-Tanos?node-id=21%3A63&scaling=scale-down-width&page-id=12%3A3"
+          >
+            <img src="img/jobs-imgs/job3.webp" />
+          </a>
+
+          <a
+            target="_blank"
+            class="job-img-4"
+            href="https://www.figma.com/proto/AlRvEgEnFXhmhEYz1um6Xa/%5BRemake%5D-Monarcas?node-id=7%3A18&scaling=min-zoom&page-id=7%3A11"
+          >
+            <img src="img/jobs-imgs/job4.webp" />
+          </a>
+
+          <a
+            target="_blank"
+            class="job-img-5"
+            href="https://www.figma.com/proto/aykx6mCSzsRjmHajChgeuG/%5Bco-produ%C3%A7%C3%A3o%5D-Eliabe?node-id=31%3A3&scaling=min-zoom&page-id=30%3A2"
+          >
+            <img src="img/jobs-imgs/job5.webp" />
+          </a>
+
+          <a
+            target="_blank"
+            class="job-img-6"
+            href="https://www.figma.com/proto/gVazGeLKtHl3rpAKuHMKaK/Mentorama---Webdesign-do-zero?node-id=1%3A2&scaling=scale-down-width&page-id=0%3A1"
+          >
+            <img src="img/jobs-imgs/job6.webp" />
+          </a>
+
+          <!-- <div class="trabalhos">
+                    <img src="img/ex-job.png">
+                </div> -->
+
+          <div class="job-info">
+            <a
+              target="_blank"
+              class="more-job"
+              href="https://drive.google.com/drive/folders/1D-OSt0_ePG2qO4yxahif7Xqw1zy5pdz0?usp=sharing"
+              >VEJA MAIS TRABALHOS</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfólio slider -->
+
+    <!-- Sobre -->
+
+    <section class="sobre" id="sobre">
+      <div class="container sobre-container">
+        <div class="sobre-conteudo">
+          <h1>Quem sou?</h1>
+          <p>
+            O meu foco, como programador e web designer, sempre foi fazer
+            <span>entregas generosas,</span> de entregar muito mais do que o
+            prometido. Acreditamos, também, que o design, a beleza de uma arte,
+            de um post, vende muito bem.<br /><br />
+
+            <span
+              >Por isso, o visual de nossas criações sempre estão como
+              prioridade,</span
+            >
+            mas, claro, sem tirar os olhos do que traz resultados significativos
+            para o seu negócio.
+          </p>
+        </div>
+
+        <div class="sobre-foto">
+          <img class="roda-ecandle" src="/img/roda-ecandle.svg" />
+          <img class="minha-foto-img" src="img/img-who-i-am.png" />
+          <img class="foto-mobile" src="img/minha-foto.webp" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Slider de Serviços -->
+
+    <section class="slider" id="slider">
+      <div class="shadows">
+        <img src="/img/shadow-left.svg" />
+        <img src="/img/shadow-right.svg" />
+      </div>
+      <div class="slider-box">
+        <div class="slider-box-slide">
+          <p>Website</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Criativo</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Landing page</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Lançamento</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>UI</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Front-End Developer</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Design</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>UX</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Digital</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>E-commerce</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Alto nível</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Único</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Beleza</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Impacto</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Referência</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Sem limites</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Alta conversão</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Apresentável</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Web design</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Consistente</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Loja virtual</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Aplicativo</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Sistemas</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+
+          <p>Interfaces</p>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16.0976L15.0326 0.990234L30.1086 16.0585L22.525 23.684L15.0499 16.1934L7.57057 23.684L0 16.0976Z"
+              fill="#E94F40"
+            />
+            <path
+              d="M15.0921 16.1051L7.64465 23.5525L15.0921 30.9999L22.5395 23.5525L15.0921 16.1051Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Autoridade -->
+
+    <section class="autoridade" id="autoridade">
+      <div class="container">
+        <div class="autoridade-box">
+          <h1>
+            Você precisa de um<br />
+            profissional de alto nível<br />
+            para ter um site de alto nível.
+          </h1>
+          <ul class="3-pontos">
+            <li>
+              <svg
+                width="263"
+                height="57"
+                viewBox="0 0 263 57"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.1116 0.939997C22.4316 0.939997 25.9316 1.88 28.6116 3.76C31.3316 5.6 33.3116 8.12 34.5516 11.32C35.7916 14.48 36.4116 17.98 36.4116 21.82V24.34C36.4116 31.62 34.5516 37.12 30.8316 40.84C27.1116 44.52 21.6316 46.36 14.3916 46.36C12.9116 46.36 11.4516 46.32 10.0116 46.24C8.57164 46.16 7.17164 46.04 5.81164 45.88V37.66C7.13164 37.78 8.55164 37.9 10.0716 38.02C11.5916 38.1 13.1516 38.14 14.7516 38.14C19.2316 38.14 22.3916 37.12 24.2316 35.08C26.0716 33.04 27.0916 30.02 27.2916 26.02C26.0916 27.82 24.4916 29.18 22.4916 30.1C20.4916 31.02 18.1916 31.48 15.5916 31.48C12.5116 31.48 9.85164 30.88 7.61164 29.68C5.37164 28.44 3.65164 26.72 2.45164 24.52C1.25164 22.28 0.651641 19.68 0.651641 16.72C0.651641 13.56 1.37164 10.8 2.81164 8.44C4.25164 6.04 6.27164 4.2 8.87164 2.92C11.5116 1.6 14.5916 0.939997 18.1116 0.939997ZM18.4116 9.1C15.7716 9.1 13.7316 9.78 12.2916 11.14C10.8516 12.5 10.1316 14.3 10.1316 16.54C10.1316 18.78 10.8316 20.58 12.2316 21.94C13.6716 23.3 15.6516 23.98 18.1716 23.98C20.4916 23.98 22.4916 23.36 24.1716 22.12C25.8516 20.88 26.6916 19.02 26.6916 16.54C26.6916 14.38 25.9916 12.6 24.5916 11.2C23.1916 9.8 21.1316 9.1 18.4116 9.1ZM42.503 46V35.26H53.063V46H42.503ZM76.0093 47.26C72.4893 47.26 69.4093 46.74 66.7693 45.7C64.1693 44.66 62.1293 43.14 60.6493 41.14C59.2093 39.14 58.4893 36.7 58.4893 33.82C58.4893 31.1 59.1493 28.82 60.4693 26.98C61.8293 25.14 63.6093 23.8 65.8093 22.96V22.18C64.0893 21.5 62.6493 20.4 61.4893 18.88C60.3693 17.36 59.8093 15.4 59.8093 13C59.8093 10.32 60.5093 8.1 61.9093 6.34C63.3493 4.54 65.2893 3.2 67.7293 2.32C70.1693 1.4 72.9293 0.939997 76.0093 0.939997C79.1293 0.939997 81.9093 1.4 84.3493 2.32C86.7893 3.2 88.7093 4.54 90.1093 6.34C91.5093 8.1 92.2093 10.32 92.2093 13C92.2093 15.4 91.6493 17.36 90.5293 18.88C89.4093 20.4 87.9693 21.5 86.2093 22.18V22.96C88.4493 23.8 90.2293 25.14 91.5493 26.98C92.9093 28.82 93.5893 31.1 93.5893 33.82C93.5893 36.7 92.8493 39.14 91.3693 41.14C89.9293 43.14 87.8893 44.66 85.2493 45.7C82.6093 46.74 79.5293 47.26 76.0093 47.26ZM76.0093 19C78.0893 19 79.7293 18.58 80.9293 17.74C82.1293 16.9 82.7293 15.64 82.7293 13.96C82.7293 12.32 82.1293 11.08 80.9293 10.24C79.7293 9.4 78.0893 8.98 76.0093 8.98C73.9293 8.98 72.2893 9.42 71.0893 10.3C69.8893 11.14 69.2893 12.36 69.2893 13.96C69.2893 15.64 69.8893 16.9 71.0893 17.74C72.2893 18.58 73.9293 19 76.0093 19ZM76.0093 39.16C78.4493 39.16 80.4093 38.62 81.8893 37.54C83.3693 36.46 84.1093 34.84 84.1093 32.68C84.1093 30.6 83.3693 29.02 81.8893 27.94C80.4093 26.82 78.4493 26.26 76.0093 26.26C73.5693 26.26 71.6293 26.82 70.1893 27.94C68.7493 29.02 68.0293 30.6 68.0293 32.68C68.0293 34.84 68.7493 36.46 70.1893 37.54C71.6293 38.62 73.5693 39.16 76.0093 39.16ZM104.629 46L119.989 11.14L119.329 10.24H106.009V17.32H98.0288V2.2H131.209V8.44L115.069 46H104.629ZM141.074 46L156.434 11.14L155.774 10.24H142.454V17.32H134.474V2.2H167.654V8.44L151.514 46H141.074ZM176.739 56.26L169.359 53.38L175.659 35.02L183.819 38.02L176.739 56.26ZM188.946 46V37C188.946 34.2 189.646 31.9 191.046 30.1C192.486 28.3 194.886 26.68 198.246 25.24L205.326 22.18C207.086 21.42 208.406 20.48 209.286 19.36C210.166 18.24 210.606 16.82 210.606 15.1C210.606 13.34 210.046 11.9 208.926 10.78C207.846 9.66 206.286 9.1 204.246 9.1C202.166 9.1 200.586 9.68 199.506 10.84C198.426 12 197.886 13.56 197.886 15.52H188.346C188.346 12.76 188.946 10.28 190.146 8.08C191.346 5.88 193.126 4.14 195.486 2.86C197.846 1.54 200.766 0.879998 204.246 0.879998C207.686 0.879998 210.586 1.5 212.946 2.74C215.306 3.98 217.086 5.66 218.286 7.78C219.526 9.86 220.146 12.18 220.146 14.74V15.46C220.146 18.82 219.226 21.6 217.386 23.8C215.546 26 212.706 27.92 208.866 29.56L201.846 32.62C200.646 33.14 199.786 33.7 199.266 34.3C198.786 34.86 198.546 35.6 198.546 36.52V37.54H220.206V46H188.946ZM225.236 37.6V27.34L241.856 0.939997L249.476 5.92L235.256 28.54L236.096 29.8H248.216V14.44H257.276V29.8H262.316V37.6H257.276V46H248.216V37.6H225.236Z"
+                  fill="url(#paint0_linear_438_7)"
+                />
+                <path
+                  d="M28.6116 3.76L28.0374 4.57865L28.0443 4.58353L28.0513 4.58828L28.6116 3.76ZM34.5516 11.32L33.6192 11.6813L33.6208 11.6853L34.5516 11.32ZM30.8316 40.84L31.5349 41.5509L31.5387 41.5471L30.8316 40.84ZM10.0116 46.24L9.95617 47.2385L10.0116 46.24ZM5.81164 45.88H4.81164V46.7692L5.6948 46.8731L5.81164 45.88ZM5.81164 37.66L5.90218 36.6641L4.81164 36.565V37.66H5.81164ZM10.0716 38.02L9.99294 39.0169L10.006 39.0179L10.0191 39.0186L10.0716 38.02ZM27.2916 26.02L28.2904 26.0699L28.4715 22.4474L26.4596 25.4653L27.2916 26.02ZM7.61164 29.68L7.12728 30.555L7.13942 30.5615L7.61164 29.68ZM2.45164 24.52L1.57014 24.9922L1.57375 24.9989L2.45164 24.52ZM2.81164 8.44L3.6653 8.96088L3.66913 8.95449L2.81164 8.44ZM8.87164 2.92L9.31333 3.81718L9.31885 3.81442L8.87164 2.92ZM12.2916 11.14L11.605 10.413L12.2916 11.14ZM12.2316 21.94L11.5348 22.6573L11.545 22.667L12.2316 21.94ZM24.1716 22.12L23.5778 21.3154L24.1716 22.12ZM24.5916 11.2L25.2987 10.4929V10.4929L24.5916 11.2ZM18.1116 1.94C22.2911 1.94 25.5719 2.84918 28.0374 4.57865L29.1859 2.94134C26.2913 0.910815 22.5722 -0.0600028 18.1116 -0.0600028V1.94ZM28.0513 4.58828C30.5947 6.30882 32.4493 8.66216 33.6192 11.6813L35.4841 10.9587C34.174 7.57783 32.0685 4.89117 29.172 2.93171L28.0513 4.58828ZM33.6208 11.6853C34.8095 14.7147 35.4116 18.0887 35.4116 21.82H37.4116C37.4116 17.8713 36.7738 14.2453 35.4825 10.9547L33.6208 11.6853ZM35.4116 21.82V24.34H37.4116V21.82H35.4116ZM35.4116 24.34C35.4116 31.4585 33.5946 36.6629 30.1245 40.1329L31.5387 41.5471C35.5087 37.5771 37.4116 31.7815 37.4116 24.34H35.4116ZM30.1284 40.1291C26.6578 43.5623 21.4711 45.36 14.3916 45.36V47.36C21.7922 47.36 27.5655 45.4777 31.5349 41.5509L30.1284 40.1291ZM14.3916 45.36C12.9297 45.36 11.4882 45.3205 10.0671 45.2415L9.95617 47.2385C11.4151 47.3195 12.8936 47.36 14.3916 47.36V45.36ZM10.0671 45.2415C8.64654 45.1626 7.26704 45.0443 5.92848 44.8868L5.6948 46.8731C7.07624 47.0357 8.49674 47.1574 9.95617 47.2385L10.0671 45.2415ZM6.81164 45.88V37.66H4.81164V45.88H6.81164ZM5.72111 38.6559C7.04558 38.7763 8.46956 38.8966 9.99294 39.0169L10.1503 37.0231C8.63372 36.9034 7.2177 36.7837 5.90218 36.6641L5.72111 38.6559ZM10.0191 39.0186C11.5575 39.0996 13.135 39.14 14.7516 39.14V37.14C13.1683 37.14 11.6258 37.1004 10.1242 37.0214L10.0191 39.0186ZM14.7516 39.14C19.3415 39.14 22.8534 38.1011 24.9742 35.7498L23.4891 34.4102C21.9299 36.1389 19.1217 37.14 14.7516 37.14V39.14ZM24.9742 35.7498C27.0253 33.4757 28.084 30.1977 28.2904 26.0699L26.2929 25.9701C26.0993 29.8423 25.118 32.6043 23.4891 34.4102L24.9742 35.7498ZM26.4596 25.4653C25.3641 27.1085 23.9087 28.3474 22.0737 29.1915L22.9095 31.0085C25.0745 30.0126 26.8191 28.5315 28.1237 26.5747L26.4596 25.4653ZM22.0737 29.1915C20.2264 30.0413 18.0732 30.48 15.5916 30.48V32.48C18.3101 32.48 20.7569 31.9987 22.9095 31.0085L22.0737 29.1915ZM15.5916 30.48C12.6418 30.48 10.1509 29.9058 8.08386 28.7985L7.13942 30.5615C9.55241 31.8541 12.3815 32.48 15.5916 32.48V30.48ZM8.09596 28.8051C6.01828 27.655 4.43654 26.0707 3.32954 24.0411L1.57375 24.9989C2.86674 27.3693 4.725 29.225 7.12733 30.5549L8.09596 28.8051ZM3.33312 24.0478C2.22286 21.9753 1.65164 19.5425 1.65164 16.72H-0.348359C-0.348359 19.8175 0.280424 22.5847 1.57016 24.9922L3.33312 24.0478ZM1.65164 16.72C1.65164 13.7169 2.33407 11.1426 3.66528 8.96086L1.958 7.91913C0.409208 10.4574 -0.348359 13.4031 -0.348359 16.72H1.65164ZM3.66913 8.95449C5.00657 6.72543 6.87939 5.01541 9.31332 3.81717L8.42996 2.02283C5.66389 3.38458 3.49671 5.35456 1.95415 7.9255L3.66913 8.95449ZM9.31885 3.81442C11.7957 2.57599 14.7172 1.94 18.1116 1.94V-0.0600028C14.466 -0.0600028 11.2276 0.624 8.42443 2.02557L9.31885 3.81442ZM18.4116 8.1C15.6034 8.1 13.2855 8.82585 11.605 10.413L12.9783 11.867C14.1778 10.7341 15.9399 10.1 18.4116 10.1V8.1ZM11.605 10.413C9.93791 11.9875 9.13164 14.0645 9.13164 16.54H11.1316C11.1316 14.5355 11.7654 13.0125 12.9783 11.867L11.605 10.413ZM9.13164 16.54C9.13164 19.0067 9.91189 21.0807 11.5349 22.6573L12.9284 21.2227C11.7514 20.0793 11.1316 18.5533 11.1316 16.54H9.13164ZM11.545 22.667C13.2173 24.2464 15.4687 24.98 18.1716 24.98V22.98C15.8346 22.98 14.126 22.3536 12.9183 21.213L11.545 22.667ZM18.1716 24.98C20.6805 24.98 22.8945 24.3056 24.7655 22.9246L23.5778 21.3154C22.0888 22.4144 20.3028 22.98 18.1716 22.98V24.98ZM24.7655 22.9246C26.7507 21.4593 27.6916 19.2701 27.6916 16.54H25.6916C25.6916 18.7699 24.9526 20.3007 23.5778 21.3154L24.7655 22.9246ZM27.6916 16.54C27.6916 14.1413 26.9043 12.0984 25.2987 10.4929L23.8845 11.9071C25.079 13.1016 25.6916 14.6186 25.6916 16.54H27.6916ZM25.2987 10.4929C23.65 8.84416 21.2955 8.1 18.4116 8.1V10.1C20.9677 10.1 22.7333 10.7558 23.8845 11.9071L25.2987 10.4929ZM42.503 46H41.503V47H42.503V46ZM42.503 35.26V34.26H41.503V35.26H42.503ZM53.063 35.26H54.063V34.26H53.063V35.26ZM53.063 46V47H54.063V46H53.063ZM43.503 46V35.26H41.503V46H43.503ZM42.503 36.26H53.063V34.26H42.503V36.26ZM52.063 35.26V46H54.063V35.26H52.063ZM53.063 45H42.503V47H53.063V45ZM66.7693 45.7L66.3979 46.6285L66.4028 46.6304L66.7693 45.7ZM60.6493 41.14L59.8377 41.7244L59.8455 41.7348L60.6493 41.14ZM60.4693 26.98L59.6651 26.3856L59.6609 26.3913L59.6568 26.3971L60.4693 26.98ZM65.8093 22.96L66.166 23.8942L66.8093 23.6486V22.96H65.8093ZM65.8093 22.18H66.8093V21.5L66.177 21.25L65.8093 22.18ZM61.4893 18.88L60.6842 19.4732L60.6892 19.48L60.6943 19.4867L61.4893 18.88ZM61.9093 6.34L61.1284 5.7153L61.1267 5.71747L61.9093 6.34ZM67.7293 2.32L68.0686 3.26069L68.0753 3.25824L68.0821 3.25569L67.7293 2.32ZM84.3493 2.32L83.9965 3.25569L84.0032 3.25824L84.01 3.26069L84.3493 2.32ZM90.1093 6.34L89.3199 6.95398L89.3267 6.96252L90.1093 6.34ZM86.2093 22.18L85.8489 21.2472L85.2093 21.4943V22.18H86.2093ZM86.2093 22.96H85.2093V23.653L85.8582 23.8963L86.2093 22.96ZM91.5493 26.98L90.7368 27.5629L90.7409 27.5687L90.7451 27.5744L91.5493 26.98ZM91.3693 41.14L90.5654 40.5451L90.5578 40.5557L91.3693 41.14ZM85.2493 45.7L84.8828 44.7696L85.2493 45.7ZM80.9293 10.24L80.3558 11.0592V11.0592L80.9293 10.24ZM71.0893 10.3L71.6628 11.1192L71.6718 11.1129L71.6807 11.1064L71.0893 10.3ZM81.8893 37.54L82.4788 38.3478L81.8893 37.54ZM81.8893 27.94L81.2859 28.7374L81.2928 28.7427L81.2998 28.7478L81.8893 27.94ZM70.1893 27.94L70.7893 28.74L70.7963 28.7347L70.8032 28.7294L70.1893 27.94ZM70.1893 37.54L69.5893 38.34L70.1893 37.54ZM76.0093 46.26C72.5856 46.26 69.6347 45.754 67.1358 44.7696L66.4028 46.6304C69.1839 47.726 72.393 48.26 76.0093 48.26V46.26ZM67.1407 44.7715C64.6908 43.7916 62.8093 42.3778 61.4531 40.5452L59.8455 41.7348C61.4493 43.9021 63.6478 45.5284 66.3979 46.6285L67.1407 44.7715ZM61.4608 40.5557C60.1631 38.7533 59.4893 36.5268 59.4893 33.82H57.4893C57.4893 36.8732 58.2555 39.5267 59.8378 41.7243L61.4608 40.5557ZM59.4893 33.82C59.4893 31.2661 60.1066 29.2011 61.2818 27.5629L59.6568 26.3971C58.192 28.4389 57.4893 30.9339 57.4893 33.82H59.4893ZM61.2735 27.5744C62.5164 25.8928 64.1391 24.6681 66.166 23.8942L65.4526 22.0258C63.0795 22.9319 61.1422 24.3872 59.6651 26.3856L61.2735 27.5744ZM66.8093 22.96V22.18H64.8093V22.96H66.8093ZM66.177 21.25C64.632 20.6393 63.3378 19.6538 62.2842 18.2733L60.6943 19.4867C61.9608 21.1462 63.5466 22.3607 65.4416 23.11L66.177 21.25ZM62.2943 18.2868C61.3317 16.9803 60.8093 15.2448 60.8093 13H58.8093C58.8093 15.5552 59.4069 17.7397 60.6842 19.4732L62.2943 18.2868ZM60.8093 13C60.8093 10.5011 61.4583 8.51329 62.6919 6.96252L61.1267 5.71747C59.5603 7.6867 58.8093 10.1389 58.8093 13H60.8093ZM62.6902 6.96469C64.001 5.32619 65.7798 4.08615 68.0686 3.26069L67.39 1.37931C64.7988 2.31385 62.6976 3.7538 61.1284 5.7153L62.6902 6.96469ZM68.0821 3.25569C70.3909 2.38515 73.0285 1.94 76.0093 1.94V-0.0600028C72.8301 -0.0600028 69.9477 0.414846 67.3765 1.3843L68.0821 3.25569ZM76.0093 1.94C79.0319 1.94 81.689 2.38566 83.9965 3.25569L84.7021 1.3843C82.1296 0.414336 79.2267 -0.0600028 76.0093 -0.0600028V1.94ZM84.01 3.26069C86.2972 4.08557 88.0514 5.32297 89.3199 6.95394L90.8987 5.72606C89.3672 3.75703 87.2814 2.31442 84.6886 1.37931L84.01 3.26069ZM89.3267 6.96252C90.5603 8.51329 91.2093 10.5011 91.2093 13H93.2093C93.2093 10.1389 92.4583 7.6867 90.8919 5.71747L89.3267 6.96252ZM91.2093 13C91.2093 15.2448 90.6869 16.9803 89.7242 18.2868L91.3344 19.4732C92.6117 17.7397 93.2093 15.5552 93.2093 13H91.2093ZM89.7242 18.2868C88.717 19.6537 87.4313 20.6358 85.8489 21.2472L86.5697 23.1128C88.5073 22.3642 90.1015 21.1463 91.3344 19.4732L89.7242 18.2868ZM85.2093 22.18V22.96H87.2093V22.18H85.2093ZM85.8582 23.8963C87.9238 24.6709 89.5389 25.8931 90.7368 27.5629L92.3618 26.3971C90.9197 24.3869 88.9748 22.9291 86.5604 22.0237L85.8582 23.8963ZM90.7451 27.5744C91.9553 29.2116 92.5893 31.2724 92.5893 33.82H94.5893C94.5893 30.9276 93.8633 28.4284 92.3535 26.3856L90.7451 27.5744ZM92.5893 33.82C92.5893 36.5209 91.8987 38.7435 90.5655 40.5452L92.1731 41.7348C93.7999 39.5365 94.5893 36.8791 94.5893 33.82H92.5893ZM90.5578 40.5557C89.246 42.3776 87.372 43.789 84.8828 44.7696L85.6158 46.6304C88.4066 45.531 90.6126 43.9024 92.1808 41.7243L90.5578 40.5557ZM84.8828 44.7696C82.3839 45.754 79.433 46.26 76.0093 46.26V48.26C79.6256 48.26 82.8347 47.726 85.6158 46.6304L84.8828 44.7696ZM76.0093 20C78.2115 20 80.0775 19.5569 81.5028 18.5592L80.3558 16.9208C79.3811 17.6031 77.9671 18 76.0093 18V20ZM81.5028 18.5592C83.0124 17.5025 83.7293 15.911 83.7293 13.96H81.7293C81.7293 15.369 81.2462 16.2975 80.3558 16.9208L81.5028 18.5592ZM83.7293 13.96C83.7293 12.0391 83.0052 10.4725 81.5028 9.42077L80.3558 11.0592C81.2534 11.6875 81.7293 12.6009 81.7293 13.96H83.7293ZM81.5028 9.42077C80.0775 8.42311 78.2115 7.98 76.0093 7.98V9.98C77.9671 9.98 79.3811 10.3769 80.3558 11.0592L81.5028 9.42077ZM76.0093 7.98C73.799 7.98 71.9257 8.44655 70.4979 9.49359L71.6807 11.1064C72.6529 10.3934 74.0596 9.98 76.0093 9.98V7.98ZM70.5158 9.48077C69.0209 10.5273 68.2893 12.069 68.2893 13.96H70.2893C70.2893 12.651 70.7577 11.7527 71.6628 11.1192L70.5158 9.48077ZM68.2893 13.96C68.2893 15.911 69.0062 17.5025 70.5158 18.5592L71.6628 16.9208C70.7724 16.2975 70.2893 15.369 70.2893 13.96H68.2893ZM70.5158 18.5592C71.9411 19.5569 73.8071 20 76.0093 20V18C74.0515 18 72.6375 17.6031 71.6628 16.9208L70.5158 18.5592ZM76.0093 40.16C78.5916 40.16 80.7788 39.5883 82.4788 38.3478L81.2998 36.7322C80.0398 37.6517 78.307 38.16 76.0093 38.16V40.16ZM82.4788 38.3478C84.2651 37.0443 85.1093 35.0944 85.1093 32.68H83.1093C83.1093 34.5856 82.4735 35.8757 81.2998 36.7322L82.4788 38.3478ZM85.1093 32.68C85.1093 30.3303 84.2544 28.4279 82.4788 27.1322L81.2998 28.7478C82.4842 29.6121 83.1093 30.8697 83.1093 32.68H85.1093ZM82.4927 27.1426C80.7914 25.8551 78.5987 25.26 76.0093 25.26V27.26C78.2999 27.26 80.0272 27.7849 81.2859 28.7374L82.4927 27.1426ZM76.0093 25.26C73.4217 25.26 71.242 25.8544 69.5754 27.1506L70.8032 28.7294C72.0166 27.7856 73.7169 27.26 76.0093 27.26V25.26ZM69.5893 27.14C67.856 28.4399 67.0293 30.3409 67.0293 32.68H69.0293C69.0293 30.8591 69.6426 29.6001 70.7893 28.74L69.5893 27.14ZM67.0293 32.68C67.0293 35.084 67.8458 37.0324 69.5893 38.34L70.7893 36.74C69.6528 35.8876 69.0293 34.596 69.0293 32.68H67.0293ZM69.5893 38.34C71.2546 39.589 73.4289 40.16 76.0093 40.16V38.16C73.7097 38.16 72.004 37.651 70.7893 36.74L69.5893 38.34ZM104.629 46L103.714 45.5968L103.095 47H104.629V46ZM119.989 11.14L120.904 11.5432L121.137 11.0145L120.795 10.5486L119.989 11.14ZM119.329 10.24L120.135 9.64863L119.836 9.24H119.329V10.24ZM106.009 10.24V9.24H105.009V10.24H106.009ZM106.009 17.32V18.32H107.009V17.32H106.009ZM98.0288 17.32H97.0288V18.32H98.0288V17.32ZM98.0288 2.2V1.2H97.0288V2.2H98.0288ZM131.209 2.2H132.209V1.2H131.209V2.2ZM131.209 8.44L132.128 8.8348L132.209 8.64576V8.44H131.209ZM115.069 46V47H115.728L115.988 46.3948L115.069 46ZM105.544 46.4032L120.904 11.5432L119.074 10.7368L103.714 45.5968L105.544 46.4032ZM120.795 10.5486L120.135 9.64863L118.522 10.8314L119.182 11.7314L120.795 10.5486ZM119.329 9.24H106.009V11.24H119.329V9.24ZM105.009 10.24V17.32H107.009V10.24H105.009ZM106.009 16.32H98.0288V18.32H106.009V16.32ZM99.0288 17.32V2.2H97.0288V17.32H99.0288ZM98.0288 3.2H131.209V1.2H98.0288V3.2ZM130.209 2.2V8.44H132.209V2.2H130.209ZM130.29 8.04519L114.15 45.6052L115.988 46.3948L132.128 8.8348L130.29 8.04519ZM115.069 45H104.629V47H115.069V45ZM141.074 46L140.159 45.5968L139.541 47H141.074V46ZM156.434 11.14L157.349 11.5432L157.582 11.0145L157.241 10.5486L156.434 11.14ZM155.774 10.24L156.581 9.64863L156.281 9.24H155.774V10.24ZM142.454 10.24V9.24H141.454V10.24H142.454ZM142.454 17.32V18.32H143.454V17.32H142.454ZM134.474 17.32H133.474V18.32H134.474V17.32ZM134.474 2.2V1.2H133.474V2.2H134.474ZM167.654 2.2H168.654V1.2H167.654V2.2ZM167.654 8.44L168.573 8.8348L168.654 8.64576V8.44H167.654ZM151.514 46V47H152.173L152.433 46.3948L151.514 46ZM141.989 46.4032L157.349 11.5432L155.519 10.7368L140.159 45.5968L141.989 46.4032ZM157.241 10.5486L156.581 9.64863L154.968 10.8314L155.628 11.7314L157.241 10.5486ZM155.774 9.24H142.454V11.24H155.774V9.24ZM141.454 10.24V17.32H143.454V10.24H141.454ZM142.454 16.32H134.474V18.32H142.454V16.32ZM135.474 17.32V2.2H133.474V17.32H135.474ZM134.474 3.2H167.654V1.2H134.474V3.2ZM166.654 2.2V8.44H168.654V2.2H166.654ZM166.735 8.04519L150.595 45.6052L152.433 46.3948L168.573 8.8348L166.735 8.04519ZM151.514 45H141.074V47H151.514V45ZM176.739 56.26L176.376 57.1916L177.309 57.5558L177.672 56.6219L176.739 56.26ZM169.359 53.38L168.414 53.0554L168.102 53.9628L168.996 54.3116L169.359 53.38ZM175.659 35.02L176.005 34.0814L175.045 33.7288L174.714 34.6954L175.659 35.02ZM183.819 38.02L184.752 38.3819L185.12 37.4327L184.165 37.0814L183.819 38.02ZM177.103 55.3284L169.723 52.4484L168.996 54.3116L176.376 57.1916L177.103 55.3284ZM170.305 53.7046L176.605 35.3446L174.714 34.6954L168.414 53.0554L170.305 53.7046ZM175.314 35.9586L183.474 38.9586L184.165 37.0814L176.005 34.0814L175.314 35.9586ZM182.887 37.6581L175.807 55.8981L177.672 56.6219L184.752 38.3819L182.887 37.6581ZM188.946 46H187.946V47H188.946V46ZM191.046 30.1L190.265 29.4752L190.256 29.4861L191.046 30.1ZM198.246 25.24L198.64 26.1591L198.642 26.1579L198.246 25.24ZM205.326 22.18L204.929 21.2619L204.929 21.2621L205.326 22.18ZM209.286 19.36L208.499 18.7422L209.286 19.36ZM208.926 10.78L208.206 11.4741L208.212 11.4807L208.219 11.4871L208.926 10.78ZM199.506 10.84L200.238 11.5214L199.506 10.84ZM197.886 15.52V16.52H198.886V15.52H197.886ZM188.346 15.52H187.346V16.52H188.346V15.52ZM190.146 8.08L191.024 8.55885L190.146 8.08ZM195.486 2.86L195.963 3.7391L195.974 3.73276L195.486 2.86ZM212.946 2.74L212.481 3.62524V3.62524L212.946 2.74ZM218.286 7.78L217.415 8.2726L217.421 8.28239L217.427 8.29206L218.286 7.78ZM217.386 23.8L218.153 24.4416L217.386 23.8ZM208.866 29.56L208.473 28.6403L208.466 28.6433L208.866 29.56ZM201.846 32.62L202.243 33.5376L202.245 33.5367L201.846 32.62ZM199.266 34.3L198.51 33.6451L198.506 33.6492L199.266 34.3ZM198.546 37.54H197.546V38.54H198.546V37.54ZM220.206 37.54H221.206V36.54H220.206V37.54ZM220.206 46V47H221.206V46H220.206ZM189.946 46V37H187.946V46H189.946ZM189.946 37C189.946 34.3704 190.6 32.3014 191.835 30.7139L190.256 29.4861C188.691 31.4986 187.946 34.0296 187.946 37H189.946ZM191.827 30.7247C193.121 29.1072 195.351 27.5685 198.64 26.1591L197.852 24.3209C194.42 25.7915 191.851 27.4928 190.265 29.4753L191.827 30.7247ZM198.642 26.1579L205.722 23.0979L204.929 21.2621L197.849 24.3221L198.642 26.1579ZM205.722 23.0981C207.584 22.2939 209.06 21.2663 210.072 19.9778L208.499 18.7422C207.752 19.6937 206.587 20.5461 204.929 21.2619L205.722 23.0981ZM210.072 19.9778C211.117 18.6473 211.606 16.9961 211.606 15.1H209.606C209.606 16.6439 209.214 17.8327 208.499 18.7422L210.072 19.9778ZM211.606 15.1C211.606 13.1071 210.962 11.4021 209.633 10.0729L208.219 11.4871C209.129 12.3979 209.606 13.5729 209.606 15.1H211.606ZM209.646 10.0859C208.324 8.71486 206.469 8.1 204.246 8.1V10.1C206.102 10.1 207.368 10.6051 208.206 11.4741L209.646 10.0859ZM204.246 8.1C201.979 8.1 200.097 8.73714 198.774 10.1586L200.238 11.5214C201.074 10.6229 202.352 10.1 204.246 10.1V8.1ZM198.774 10.1586C197.483 11.545 196.886 13.3699 196.886 15.52H198.886C198.886 13.7501 199.368 12.455 200.238 11.5214L198.774 10.1586ZM197.886 14.52H188.346V16.52H197.886V14.52ZM189.346 15.52C189.346 12.91 189.912 10.5975 191.024 8.55885L189.268 7.60115C187.98 9.96253 187.346 12.61 187.346 15.52H189.346ZM191.024 8.55885C192.125 6.54033 193.759 4.93396 195.962 3.73903L195.009 1.98097C192.492 3.34604 190.567 5.21967 189.268 7.60115L191.024 8.55885ZM195.974 3.73276C198.148 2.5168 200.889 1.88 204.246 1.88V-0.120002C200.643 -0.120002 197.544 0.563198 194.998 1.98724L195.974 3.73276ZM204.246 1.88C207.569 1.88 210.3 2.47932 212.481 3.62524L213.411 1.85476C210.872 0.520677 207.802 -0.120002 204.246 -0.120002V1.88ZM212.481 3.62524C214.687 4.78471 216.319 6.33531 217.415 8.2726L219.156 7.2874C217.853 4.98469 215.924 3.17528 213.411 1.85476L212.481 3.62524ZM217.427 8.29206C218.569 10.2082 219.146 12.3495 219.146 14.74H221.146C221.146 12.0104 220.482 9.51175 219.145 7.26793L217.427 8.29206ZM219.146 14.74V15.46H221.146V14.74H219.146ZM219.146 15.46C219.146 18.6277 218.283 21.1683 216.619 23.1584L218.153 24.4416C220.168 22.0317 221.146 19.0123 221.146 15.46H219.146ZM216.619 23.1584C214.915 25.1951 212.229 27.0361 208.473 28.6404L209.258 30.4796C213.182 28.8039 216.176 26.8049 218.153 24.4416L216.619 23.1584ZM208.466 28.6433L201.446 31.7033L202.245 33.5367L209.265 30.4767L208.466 28.6433ZM201.448 31.7024C200.189 32.2481 199.172 32.8814 198.51 33.6451L200.021 34.9549C200.4 34.5186 201.103 34.0319 202.243 33.5376L201.448 31.7024ZM198.506 33.6492C197.836 34.4319 197.546 35.4223 197.546 36.52H199.546C199.546 35.7777 199.736 35.2881 200.025 34.9508L198.506 33.6492ZM197.546 36.52V37.54H199.546V36.52H197.546ZM198.546 38.54H220.206V36.54H198.546V38.54ZM219.206 37.54V46H221.206V37.54H219.206ZM220.206 45H188.946V47H220.206V45ZM225.236 37.6H224.236V38.6H225.236V37.6ZM225.236 27.34L224.39 26.8072L224.236 27.0514V27.34H225.236ZM241.856 0.939997L242.403 0.102911L241.551 -0.453541L241.01 0.407235L241.856 0.939997ZM249.476 5.92L250.322 6.45222L250.845 5.62041L250.023 5.08291L249.476 5.92ZM235.256 28.54L234.409 28.0078L234.065 28.556L234.424 29.0947L235.256 28.54ZM236.096 29.8L235.264 30.3547L235.561 30.8H236.096V29.8ZM248.216 29.8V30.8H249.216V29.8H248.216ZM248.216 14.44V13.44H247.216V14.44H248.216ZM257.276 14.44H258.276V13.44H257.276V14.44ZM257.276 29.8H256.276V30.8H257.276V29.8ZM262.316 29.8H263.316V28.8H262.316V29.8ZM262.316 37.6V38.6H263.316V37.6H262.316ZM257.276 37.6V36.6H256.276V37.6H257.276ZM257.276 46V47H258.276V46H257.276ZM248.216 46H247.216V47H248.216V46ZM248.216 37.6H249.216V36.6H248.216V37.6ZM226.236 37.6V27.34H224.236V37.6H226.236ZM226.082 27.8728L242.702 1.47276L241.01 0.407235L224.39 26.8072L226.082 27.8728ZM241.309 1.77708L248.929 6.75708L250.023 5.08291L242.403 0.102911L241.309 1.77708ZM248.629 5.38778L234.409 28.0078L236.102 29.0722L250.322 6.45222L248.629 5.38778ZM234.424 29.0947L235.264 30.3547L236.928 29.2453L236.088 27.9853L234.424 29.0947ZM236.096 30.8H248.216V28.8H236.096V30.8ZM249.216 29.8V14.44H247.216V29.8H249.216ZM248.216 15.44H257.276V13.44H248.216V15.44ZM256.276 14.44V29.8H258.276V14.44H256.276ZM257.276 30.8H262.316V28.8H257.276V30.8ZM261.316 29.8V37.6H263.316V29.8H261.316ZM262.316 36.6H257.276V38.6H262.316V36.6ZM256.276 37.6V46H258.276V37.6H256.276ZM257.276 45H248.216V47H257.276V45ZM249.216 46V37.6H247.216V46H249.216ZM248.216 36.6H225.236V38.6H248.216V36.6Z"
+                  fill="#E94F40"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_438_7"
+                    x1="131"
+                    y1="12.5"
+                    x2="131"
+                    y2="52.5"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#E94F40" />
+                    <stop offset="1" stop-color="#E94F40" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <p class="text-1">Reais(R$) investidos em formações e cursos.</p>
+            </li>
+            <li>
+              <svg
+                width="73"
+                height="46"
+                viewBox="0 0 73 46"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.0927 40.42V29.26H0.472656V21.46H11.0927V10.24H19.6127V21.46H30.2927V29.26H19.6127V40.42H11.0927ZM35.1948 37.6V27.34L51.8148 0.939997L59.4348 5.92L45.2148 28.54L46.0548 29.8H58.1748V14.44H67.2348V29.8H72.2748V37.6H67.2348V46H58.1748V37.6H35.1948Z"
+                  fill="url(#paint0_linear_438_8)"
+                />
+                <path
+                  d="M11.0927 40.42H10.0927V41.42H11.0927V40.42ZM11.0927 29.26H12.0927V28.26H11.0927V29.26ZM0.472656 29.26H-0.527344V30.26H0.472656V29.26ZM0.472656 21.46V20.46H-0.527344V21.46H0.472656ZM11.0927 21.46V22.46H12.0927V21.46H11.0927ZM11.0927 10.24V9.24H10.0927V10.24H11.0927ZM19.6127 10.24H20.6127V9.24H19.6127V10.24ZM19.6127 21.46H18.6127V22.46H19.6127V21.46ZM30.2927 21.46H31.2927V20.46H30.2927V21.46ZM30.2927 29.26V30.26H31.2927V29.26H30.2927ZM19.6127 29.26V28.26H18.6127V29.26H19.6127ZM19.6127 40.42V41.42H20.6127V40.42H19.6127ZM12.0927 40.42V29.26H10.0927V40.42H12.0927ZM11.0927 28.26H0.472656V30.26H11.0927V28.26ZM1.47266 29.26V21.46H-0.527344V29.26H1.47266ZM0.472656 22.46H11.0927V20.46H0.472656V22.46ZM12.0927 21.46V10.24H10.0927V21.46H12.0927ZM11.0927 11.24H19.6127V9.24H11.0927V11.24ZM18.6127 10.24V21.46H20.6127V10.24H18.6127ZM19.6127 22.46H30.2927V20.46H19.6127V22.46ZM29.2927 21.46V29.26H31.2927V21.46H29.2927ZM30.2927 28.26H19.6127V30.26H30.2927V28.26ZM18.6127 29.26V40.42H20.6127V29.26H18.6127ZM19.6127 39.42H11.0927V41.42H19.6127V39.42ZM35.1948 37.6H34.1948V38.6H35.1948V37.6ZM35.1948 27.34L34.3486 26.8072L34.1948 27.0514V27.34H35.1948ZM51.8148 0.939997L52.3619 0.102911L51.5105 -0.453541L50.9686 0.407235L51.8148 0.939997ZM59.4348 5.92L60.2815 6.45222L60.8044 5.62041L59.9819 5.08291L59.4348 5.92ZM45.2148 28.54L44.3682 28.0078L44.0236 28.556L44.3828 29.0947L45.2148 28.54ZM46.0548 29.8L45.2228 30.3547L45.5197 30.8H46.0548V29.8ZM58.1748 29.8V30.8H59.1748V29.8H58.1748ZM58.1748 14.44V13.44H57.1748V14.44H58.1748ZM67.2348 14.44H68.2348V13.44H67.2348V14.44ZM67.2348 29.8H66.2348V30.8H67.2348V29.8ZM72.2748 29.8H73.2748V28.8H72.2748V29.8ZM72.2748 37.6V38.6H73.2748V37.6H72.2748ZM67.2348 37.6V36.6H66.2348V37.6H67.2348ZM67.2348 46V47H68.2348V46H67.2348ZM58.1748 46H57.1748V47H58.1748V46ZM58.1748 37.6H59.1748V36.6H58.1748V37.6ZM36.1948 37.6V27.34H34.1948V37.6H36.1948ZM36.0411 27.8728L52.6611 1.47276L50.9686 0.407235L34.3486 26.8072L36.0411 27.8728ZM51.2678 1.77708L58.8878 6.75708L59.9819 5.08291L52.3619 0.102911L51.2678 1.77708ZM58.5882 5.38778L44.3682 28.0078L46.0615 29.0722L60.2815 6.45222L58.5882 5.38778ZM44.3828 29.0947L45.2228 30.3547L46.8869 29.2453L46.0469 27.9853L44.3828 29.0947ZM46.0548 30.8H58.1748V28.8H46.0548V30.8ZM59.1748 29.8V14.44H57.1748V29.8H59.1748ZM58.1748 15.44H67.2348V13.44H58.1748V15.44ZM66.2348 14.44V29.8H68.2348V14.44H66.2348ZM67.2348 30.8H72.2748V28.8H67.2348V30.8ZM71.2748 29.8V37.6H73.2748V29.8H71.2748ZM72.2748 36.6H67.2348V38.6H72.2748V36.6ZM66.2348 37.6V46H68.2348V37.6H66.2348ZM67.2348 45H58.1748V47H67.2348V45ZM59.1748 46V37.6H57.1748V46H59.1748ZM58.1748 36.6H35.1948V38.6H58.1748V36.6Z"
+                  fill="#E94F40"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_438_8"
+                    x1="35.5"
+                    y1="13.5"
+                    x2="35.5"
+                    y2="52"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#E94F40" />
+                    <stop offset="1" stop-color="#E94F40" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <p class="text-2">
+                Anos trabalhando todos os dias para entregar projetos de alto
+                nível.
+              </p>
+            </li>
+            <li>
+              <svg
+                width="115"
+                height="48"
+                viewBox="0 0 115 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.0614 40.42V29.26H0.441406V21.46H11.0614V10.24H19.5814V21.46H30.2614V29.26H19.5814V40.42H11.0614ZM52.7436 47.14C49.2636 47.14 46.2636 46.48 43.7436 45.16C41.2236 43.8 39.2836 41.98 37.9236 39.7C36.6036 37.42 35.9436 34.9 35.9436 32.14H45.4236C45.4236 34.22 46.1036 35.88 47.4636 37.12C48.8636 38.36 50.6436 38.98 52.8036 38.98C55.1636 38.98 57.0036 38.28 58.3236 36.88C59.6436 35.44 60.3036 33.62 60.3036 31.42C60.3036 29.26 59.6436 27.44 58.3236 25.96C57.0436 24.48 55.2436 23.74 52.9236 23.74C51.4836 23.74 50.1836 24.04 49.0236 24.64C47.8636 25.24 47.0036 26 46.4436 26.92H37.2036L39.4236 2.2H66.0036V10.6H46.8636L46.0836 19.18C47.1236 18.42 48.3236 17.8 49.6836 17.32C51.0436 16.84 52.6636 16.6 54.5436 16.6C57.7036 16.6 60.4236 17.26 62.7036 18.58C64.9836 19.86 66.7236 21.6 67.9236 23.8C69.1636 25.96 69.7836 28.38 69.7836 31.06V31.84C69.7836 34.52 69.1236 37.04 67.8036 39.4C66.4836 41.72 64.5436 43.6 61.9836 45.04C59.4636 46.44 56.3836 47.14 52.7436 47.14ZM94.7169 47.14C91.2369 47.14 88.2569 46.58 85.7769 45.46C83.2969 44.34 81.2769 42.78 79.7169 40.78C78.1569 38.78 77.0169 36.5 76.2969 33.94C75.5769 31.38 75.2169 28.66 75.2169 25.78V22.36C75.2169 18.4 75.9169 14.8 77.3169 11.56C78.7169 8.28 80.8569 5.68 83.7369 3.76C86.6169 1.84 90.2769 0.879998 94.7169 0.879998C99.1569 0.879998 102.797 1.84 105.637 3.76C108.517 5.68 110.657 8.28 112.057 11.56C113.457 14.8 114.157 18.4 114.157 22.36V25.78C114.157 28.66 113.777 31.38 113.017 33.94C112.297 36.5 111.157 38.78 109.597 40.78C108.077 42.78 106.077 44.34 103.597 45.46C101.157 46.58 98.1969 47.14 94.7169 47.14ZM94.7169 38.08C97.9569 38.08 100.357 36.96 101.917 34.72C103.517 32.44 104.317 28.92 104.317 24.16C104.317 19.12 103.497 15.5 101.857 13.3C100.257 11.06 97.8769 9.94 94.7169 9.94C91.5169 9.94 89.0969 11.04 87.4569 13.24C85.8569 15.44 85.0569 19.04 85.0569 24.04C85.0569 28.88 85.8369 32.44 87.3969 34.72C88.9969 36.96 91.4369 38.08 94.7169 38.08Z"
+                  fill="url(#paint0_linear_438_9)"
+                />
+                <path
+                  d="M11.0614 40.42H10.0614V41.42H11.0614V40.42ZM11.0614 29.26H12.0614V28.26H11.0614V29.26ZM0.441406 29.26H-0.558594V30.26H0.441406V29.26ZM0.441406 21.46V20.46H-0.558594V21.46H0.441406ZM11.0614 21.46V22.46H12.0614V21.46H11.0614ZM11.0614 10.24V9.24H10.0614V10.24H11.0614ZM19.5814 10.24H20.5814V9.24H19.5814V10.24ZM19.5814 21.46H18.5814V22.46H19.5814V21.46ZM30.2614 21.46H31.2614V20.46H30.2614V21.46ZM30.2614 29.26V30.26H31.2614V29.26H30.2614ZM19.5814 29.26V28.26H18.5814V29.26H19.5814ZM19.5814 40.42V41.42H20.5814V40.42H19.5814ZM12.0614 40.42V29.26H10.0614V40.42H12.0614ZM11.0614 28.26H0.441406V30.26H11.0614V28.26ZM1.44141 29.26V21.46H-0.558594V29.26H1.44141ZM0.441406 22.46H11.0614V20.46H0.441406V22.46ZM12.0614 21.46V10.24H10.0614V21.46H12.0614ZM11.0614 11.24H19.5814V9.24H11.0614V11.24ZM18.5814 10.24V21.46H20.5814V10.24H18.5814ZM19.5814 22.46H30.2614V20.46H19.5814V22.46ZM29.2614 21.46V29.26H31.2614V21.46H29.2614ZM30.2614 28.26H19.5814V30.26H30.2614V28.26ZM18.5814 29.26V40.42H20.5814V29.26H18.5814ZM19.5814 39.42H11.0614V41.42H19.5814V39.42ZM43.7436 45.16L43.2686 46.0401L43.2796 46.0458L43.7436 45.16ZM37.9236 39.7L37.0581 40.2011L37.0648 40.2123L37.9236 39.7ZM35.9436 32.14V31.14H34.9436V32.14H35.9436ZM45.4236 32.14H46.4236V31.14H45.4236V32.14ZM47.4636 37.12L46.7898 37.859L46.7952 37.8638L46.8006 37.8686L47.4636 37.12ZM58.3236 36.88L59.0513 37.5661L59.0607 37.5557L58.3236 36.88ZM58.3236 25.96L57.5672 26.6142L57.5722 26.6199L57.5773 26.6256L58.3236 25.96ZM49.0236 24.64L49.483 25.5282L49.0236 24.64ZM46.4436 26.92V27.92H47.0056L47.2978 27.4399L46.4436 26.92ZM37.2036 26.92L36.2076 26.8306L36.1098 27.92H37.2036V26.92ZM39.4236 2.2V1.2H38.5094L38.4276 2.11055L39.4236 2.2ZM66.0036 2.2H67.0036V1.2H66.0036V2.2ZM66.0036 10.6V11.6H67.0036V10.6H66.0036ZM46.8636 10.6V9.6H45.9504L45.8677 10.5095L46.8636 10.6ZM46.0836 19.18L45.0877 19.0895L44.8874 21.2927L46.6736 19.9874L46.0836 19.18ZM49.6836 17.32L49.3508 16.377L49.6836 17.32ZM62.7036 18.58L62.2025 19.4455L62.2141 19.452L62.7036 18.58ZM67.9236 23.8L67.0457 24.2789L67.0509 24.2884L67.0563 24.2979L67.9236 23.8ZM67.8036 39.4L68.6728 39.8945L68.6764 39.8882L67.8036 39.4ZM61.9836 45.04L62.4692 45.9142L62.4739 45.9116L61.9836 45.04ZM52.7436 46.14C49.3896 46.14 46.5559 45.5042 44.2076 44.2742L43.2796 46.0458C45.9713 47.4558 49.1376 48.14 52.7436 48.14V46.14ZM44.2185 44.28C41.8444 42.9987 40.0427 41.3006 38.7824 39.1877L37.0648 40.2123C38.5245 42.6594 40.6028 44.6013 43.2687 46.04L44.2185 44.28ZM38.789 39.199C37.5614 37.0786 36.9436 34.7328 36.9436 32.14H34.9436C34.9436 35.0672 35.6457 37.7614 37.0582 40.201L38.789 39.199ZM35.9436 33.14H45.4236V31.14H35.9436V33.14ZM44.4236 32.14C44.4236 34.4607 45.1939 36.4038 46.7898 37.859L48.1373 36.381C47.0133 35.3562 46.4236 33.9793 46.4236 32.14H44.4236ZM46.8006 37.8686C48.4115 39.2954 50.4396 39.98 52.8036 39.98V37.98C50.8476 37.98 49.3157 37.4246 48.1266 36.3714L46.8006 37.8686ZM52.8036 39.98C55.3721 39.98 57.5008 39.2104 59.0512 37.566L57.596 36.194C56.5064 37.3496 54.9551 37.98 52.8036 37.98V39.98ZM59.0607 37.5557C60.5715 35.9077 61.3036 33.8362 61.3036 31.42H59.3036C59.3036 33.4038 58.7157 34.9723 57.5864 36.2043L59.0607 37.5557ZM61.3036 31.42C61.3036 29.0382 60.5684 26.9745 59.0699 25.2944L57.5773 26.6256C58.7188 27.9054 59.3036 29.4818 59.3036 31.42H61.3036ZM59.08 25.3058C57.5744 23.565 55.4747 22.74 52.9236 22.74V24.74C55.0125 24.74 56.5128 25.395 57.5672 26.6142L59.08 25.3058ZM52.9236 22.74C51.3404 22.74 49.8803 23.071 48.5642 23.7518L49.483 25.5282C50.4869 25.009 51.6268 24.74 52.9236 24.74V22.74ZM48.5642 23.7518C47.276 24.4181 46.2632 25.2931 45.5894 26.4001L47.2978 27.4399C47.744 26.7069 48.4512 26.0619 49.483 25.5282L48.5642 23.7518ZM46.4436 25.92H37.2036V27.92H46.4436V25.92ZM38.1996 27.0094L40.4196 2.28944L38.4276 2.11055L36.2076 26.8306L38.1996 27.0094ZM39.4236 3.2H66.0036V1.2H39.4236V3.2ZM65.0036 2.2V10.6H67.0036V2.2H65.0036ZM66.0036 9.6H46.8636V11.6H66.0036V9.6ZM45.8677 10.5095L45.0877 19.0895L47.0795 19.2705L47.8595 10.6905L45.8677 10.5095ZM46.6736 19.9874C47.6262 19.2913 48.7375 18.7144 50.0164 18.263L49.3508 16.377C47.9097 16.8856 46.621 17.5487 45.4936 18.3726L46.6736 19.9874ZM50.0164 18.263C51.2426 17.8302 52.7444 17.6 54.5436 17.6V15.6C52.5828 15.6 50.8446 15.8498 49.3508 16.377L50.0164 18.263ZM54.5436 17.6C57.5628 17.6 60.1026 18.2297 62.2026 19.4454L63.2046 17.7146C60.7446 16.2903 57.8444 15.6 54.5436 15.6V17.6ZM62.2141 19.452C64.3377 20.6442 65.9397 22.2511 67.0457 24.2789L68.8015 23.3211C67.5075 20.9489 65.6295 19.0758 63.1931 17.708L62.2141 19.452ZM67.0563 24.2979C68.2028 26.2949 68.7836 28.541 68.7836 31.06H70.7836C70.7836 28.219 70.1244 25.6251 68.7908 23.3021L67.0563 24.2979ZM68.7836 31.06V31.84H70.7836V31.06H68.7836ZM68.7836 31.84C68.7836 34.3475 68.1682 36.6996 66.9308 38.9118L68.6764 39.8882C70.079 37.3804 70.7836 34.6925 70.7836 31.84H68.7836ZM66.9344 38.9055C65.713 41.0522 63.9115 42.8082 61.4933 44.1684L62.4739 45.9116C65.1757 44.3918 67.2542 42.3878 68.6728 39.8945L66.9344 38.9055ZM61.498 44.1658C59.1606 45.4644 56.2575 46.14 52.7436 46.14V48.14C56.5097 48.14 59.7666 47.4156 62.4692 45.9142L61.498 44.1658ZM85.7769 45.46L86.1885 44.5486L85.7769 45.46ZM79.7169 40.78L78.9284 41.395L79.7169 40.78ZM76.2969 33.94L75.3342 34.2107L76.2969 33.94ZM77.3169 11.56L78.2349 11.9567L78.2366 11.9526L77.3169 11.56ZM83.7369 3.76L83.1822 2.92795V2.92795L83.7369 3.76ZM105.637 3.76L105.077 4.58846L105.082 4.59205L105.637 3.76ZM112.057 11.56L111.137 11.9526L111.139 11.9567L112.057 11.56ZM113.017 33.94L112.058 33.6554L112.056 33.6623L112.054 33.6693L113.017 33.94ZM109.597 40.78L108.808 40.1649L108.801 40.1749L109.597 40.78ZM103.597 45.46L103.185 44.5486L103.18 44.5512L103.597 45.46ZM101.917 34.72L101.098 34.1456L101.096 34.1485L101.917 34.72ZM101.857 13.3L101.043 13.8812L101.049 13.8895L101.055 13.8977L101.857 13.3ZM87.4569 13.24L86.6551 12.6423L86.6481 12.6518L87.4569 13.24ZM87.3969 34.72L86.5716 35.2847L86.5773 35.293L86.5831 35.3012L87.3969 34.72ZM94.7169 46.14C91.3407 46.14 88.5084 45.5963 86.1885 44.5486L85.3653 46.3714C88.0054 47.5637 91.1331 48.14 94.7169 48.14V46.14ZM86.1885 44.5486C83.8452 43.4904 81.9584 42.0279 80.5054 40.165L78.9284 41.395C80.5953 43.5321 82.7485 45.1896 85.3653 46.3714L86.1885 44.5486ZM80.5054 40.165C79.0291 38.2723 77.9461 36.1104 77.2595 33.6693L75.3342 34.2107C76.0876 36.8896 77.2847 39.2877 78.9284 41.395L80.5054 40.165ZM77.2595 33.6693C76.5663 31.2043 76.2169 28.576 76.2169 25.78H74.2169C74.2169 28.744 74.5875 31.5557 75.3342 34.2107L77.2595 33.6693ZM76.2169 25.78V22.36H74.2169V25.78H76.2169ZM76.2169 22.36C76.2169 18.5198 76.8952 15.057 78.2348 11.9567L76.3989 11.1633C74.9386 14.543 74.2169 18.2802 74.2169 22.36H76.2169ZM78.2366 11.9526C79.5627 8.8457 81.5785 6.40076 84.2916 4.59205L83.1822 2.92795C80.1352 4.95924 77.871 7.7143 76.3971 11.1674L78.2366 11.9526ZM84.2916 4.59205C86.9666 2.80873 90.4189 1.88 94.7169 1.88V-0.120002C90.1349 -0.120002 86.2672 0.871269 83.1822 2.92795L84.2916 4.59205ZM94.7169 1.88C99.0157 1.88 102.445 2.80901 105.077 4.58844L106.197 2.93155C103.149 0.87098 99.2981 -0.120002 94.7169 -0.120002V1.88ZM105.082 4.59205C107.795 6.40076 109.811 8.8457 111.137 11.9526L112.977 11.1674C111.503 7.7143 109.239 4.95924 106.192 2.92795L105.082 4.59205ZM111.139 11.9567C112.479 15.057 113.157 18.5198 113.157 22.36H115.157C115.157 18.2802 114.435 14.543 112.975 11.1633L111.139 11.9567ZM113.157 22.36V25.78H115.157V22.36H113.157ZM113.157 25.78C113.157 28.5712 112.789 31.1947 112.058 33.6554L113.976 34.2246C114.765 31.5653 115.157 28.7488 115.157 25.78H113.157ZM112.054 33.6693C111.368 36.1104 110.285 38.2723 108.808 40.165L110.385 41.395C112.029 39.2877 113.226 36.8896 113.98 34.2107L112.054 33.6693ZM108.801 40.1749C107.39 42.0315 105.527 43.4913 103.185 44.5486L104.008 46.3714C106.627 45.1887 108.764 43.5285 110.393 41.3851L108.801 40.1749ZM103.18 44.5512C100.903 45.5961 98.0938 46.14 94.7169 46.14V48.14C98.2999 48.14 101.41 47.5639 104.014 46.3688L103.18 44.5512ZM94.7169 39.08C98.2141 39.08 100.954 37.8527 102.737 35.2915L101.096 34.1485C99.7599 36.0673 97.6997 37.08 94.7169 37.08V39.08ZM102.735 35.2944C104.511 32.7642 105.317 28.9953 105.317 24.16H103.317C103.317 28.8447 102.523 32.1158 101.098 34.1456L102.735 35.2944ZM105.317 24.16C105.317 19.0615 104.497 15.1685 102.659 12.7023L101.055 13.8977C102.497 15.8315 103.317 19.1785 103.317 24.16H105.317ZM102.671 12.7188C100.853 10.1742 98.1449 8.94 94.7169 8.94V10.94C97.6089 10.94 99.6607 11.9458 101.043 13.8812L102.671 12.7188ZM94.7169 8.94C91.2607 8.94 88.5168 10.1449 86.6551 12.6423L88.2586 13.8377C89.6769 11.9351 91.7731 10.94 94.7169 10.94V8.94ZM86.6481 12.6518C84.8566 15.1152 84.0569 18.9824 84.0569 24.04H86.0569C86.0569 19.0976 86.8571 15.7648 88.2656 13.8282L86.6481 12.6518ZM84.0569 24.04C84.0569 28.9479 84.8404 32.7546 86.5716 35.2847L88.2222 34.1553C86.8333 32.1254 86.0569 28.8121 86.0569 24.04H84.0569ZM86.5831 35.3012C88.4083 37.8565 91.1842 39.08 94.7169 39.08V37.08C91.6895 37.08 89.5854 36.0635 88.2106 34.1388L86.5831 35.3012Z"
+                  fill="#E94F40"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_438_9"
+                    x1="57.5"
+                    y1="7"
+                    x2="57.5"
+                    y2="52.5"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#E94F40" />
+                    <stop offset="1" stop-color="#E94F40" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <p class="text-3">
+                Projetos de alto nível entregues no prazo correto e cliente
+                realizado.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+
+    <section class="contato" id="contato">
+      <div class="container contato-container">
+        <div class="c-item contato-info">
+          <p class="hat">VAMOS COMEÇAR SEU PROJETO?</p>
+          <h1>Contrate-me.</h1>
+          <p class="cta">
+            Vamos conversar no Whatsapp sobre como
+            <span>eu posso fazer o melhor projeto possível pra você.</span
+            ><br /><br />
+
+            Depois de entender o seu problema, vou te mandar um orçamento com a
+            proposta, valores, prazos e condições do projeto.
+          </p>
+          <a target="_blank" href="http://wa.me/5531993818528"
+            >ENTRAR EM CONTATO</a
+          >
+        </div>
+
+        <div class="c-item contato-logo">
+          <div class="img-box">
+            <img
+              class="logo-ecandle-footer"
+              src="img/iPad Mini.png"
+              alt="logo-ecandle"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+      <div class="container footer-container">
+        <div class="f-item logo-footer">
+          <a target="_blank" href="ecandle.com.br">
+            <img
+              class="logo-ecandle"
+              src="img/icon-footer.svg"
+              alt="logo-ecandle"
+            />
+          </a>
+
+          <!-- <a target="_blank" href="https://www.instagram.com/gustavocandle/">
+                    <img src="img/instagram-icon.svg" alt="instagram-social">
+                </a>
+
+                <a target="_blank" href="https://www.facebook.com/gustavocandle/">
+                    <img src="img/facebook-icon.svg" alt="facebook-social">
+                </a> -->
+        </div>
+
+        <div class="f-item direiros-footer">
+          <p>TODOS OS DIREITOS RESERVADOS - ECANDLE</p>
+        </div>
+
+        <div class="f-item arrow-footer">
+          <a href="#header">
+            <img src="img/up-arrow-footer.svg" alt="subir" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/scritps.js"></script>
+  </body>
+</html>

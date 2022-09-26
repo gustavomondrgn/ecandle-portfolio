@@ -1,0 +1,42 @@
+/* Font-face Breve news */
+
+@font-face {
+  font-family: "Breve News";
+  src: url(/fonts/Breve\ News\ Bold\ Italic.otf);
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* Definição de texto */
+
+
+/* Definição do container principal */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Scroll */
+
+/* body::-webkit-scrollbar {
+    width: 8px;               
+  }
+
+body::-webkit-scrollbar-thumb {
+    background: #23293a;
+}
+ */
+
+ body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #272e42;    /* color of the scroll thumb */
+    border: 3px solid #171B26;  /* creates padding around scroll thumb */
+  }

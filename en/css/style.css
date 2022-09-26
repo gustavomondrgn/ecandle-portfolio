@@ -1,0 +1,990 @@
+body {
+    background-color: #171B26;
+    width: 100%;
+    height: 100%;
+}
+
+/*---------------------------------- Preloader */
+
+.pace {
+    pointer-events: none;
+    user-select: none;
+    z-index: 2000;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    border: 0px;
+    height: 1px;
+    overflow: hidden;
+    background:#1b1b1b;
+    z-index: 99999998;
+  }
+  
+  .pace .pace-progress {
+    box-sizing: border-box;
+    transform: translate3d(0, 0, 0);
+    max-width: 300px;
+    position: fixed;
+    z-index: 2000;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    height: 100%;
+    width: 100%;
+    background: grey;
+    z-index: 99999999;
+  }
+  
+  .pace.pace-inactive {
+    display: none;
+  }
+  
+  #preloader{
+    width:100%;
+    height:100vh;
+    background:#0c0e14;
+    overflow:hidden;
+    position:fixed;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 9999999;
+  }
+
+  .p {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #5f5f5f;
+    z-index: 99999999;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+/*---------------------------------- Header */
+
+.nome-acima-da-logo {
+    color: #fff;
+}
+
+header li a {
+    color: #B5BDD6;
+    font-family: 'Roc Grotesk', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    transition: ease;
+    transition-duration: 0.5s;
+}
+
+header li a:hover {
+    color: #ffffff;
+}
+
+header .header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 60px;
+}
+
+header a img.logo-ecandle {
+    width: 156px;
+    height: auto;
+} 
+
+header ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+header ul li {
+    margin-left: 30px;
+}
+
+/* header ul li svg path{
+    stroke: #333a4c;
+} */
+
+header .menu-burger {
+    display: none;
+}
+
+header {
+    width: 100%;
+}
+
+#translate > li.lang-item.lang-item-6.lang-item-en > a > span {
+    opacity: 30%;
+}
+
+#translate > li.lang-item.lang-item-6.lang-item-en {
+    margin-left: 16px;
+}
+
+
+@media screen and (max-width: 960px) {
+    header {
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        background-color: #171b2679;
+        backdrop-filter: blur(50px);
+    }
+
+    #translate > li.lang-item.lang-item-6.lang-item-en {
+        margin-left: 16px;
+    }
+
+    .menu-burger {
+        display: block;
+        z-index: 999;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+
+        height: 100vh;
+        background-color: #10141b;
+
+        margin: 0;
+
+        /* padding: 325px 20px; */
+
+        flex-direction: column;
+
+        align-items: end;
+        padding: 0 50px 0 0;
+
+        width: 100%;
+        max-width: 250px;
+
+        transition: .5s cubic-bezier(0.82, 0.03, 0.27, 0.95);
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+}
+
+/*---------------------------------- Hero */
+
+#hero {
+    padding-bottom: 120px;
+}
+
+#hero .hero-content {
+    padding-top: 0px;
+}
+
+#hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
+
+#hero p.agenda {
+    color: #FD6051;
+    font-family: 'Roc Grotesk', sans-serif;
+    font-size: 14px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+#hero div.hat {
+    display: flex;
+    padding: 40px 0px 20px 0px;
+}
+
+#hero svg {
+    margin-right: 16px;
+}
+
+#hero h1 {
+    font-family: "Breve News";
+    color: #E6F1FF;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+#hero h2 {
+    font-family: "Breve News";
+    color: #8087A3;
+    font-size: 64px;
+    font-weight: 500;
+    padding-top: 12px;
+}
+
+#hero p.last-tittle {
+    color: #8087A3;
+    font-family: 'Roc Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: medium;
+    line-height: 140%;
+    padding-top: 30px;
+}
+
+#hero .btn-cta {
+    padding: 60px 0 0 0;
+}
+
+#hero a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'Roc Grotesk', sans-serif;
+    background-color: #E94F40;
+    padding: 20px 40px;
+    display: block;
+    width: max-content;
+    font-weight: 600;
+    transition: ease 0.5s;
+}
+
+#hero a:hover {
+    background-color: #ff5443;
+}
+
+#hero .hero-content .elipse {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background-color: #4D5E87;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(100px);
+    opacity: 0.2;
+    z-index: -10;
+    transform: translate(-30%, -30%);
+}
+
+/* Kamylla */
+
+.video {
+    margin-top: 70px;
+}
+
+
+/*---------------------------------- Portfólio */
+
+#portfolio .portfolio-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0 120px 0;
+}
+
+#portfolio h1.section-title {
+    font-family: "Breve News";
+    color: #E6F1FF;
+    padding-bottom: 10px;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+#portfolio p {
+    color: #515A75;
+    padding: 10px 0 30px 0;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Roc Grotesk';
+}
+
+#portfolio .jobs {
+    padding-bottom: 76px;
+}
+
+#portfolio img{
+    width: 775px;
+    padding: 0 6px;
+}
+
+#portfolio .job-info{
+    padding-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#portfolio .job-info h1.job-title {
+    color: #B5BDD6;
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+#portfolio .job-info p {
+    color: #E94F40;
+    font-weight: Medium;
+    font-size: 12px;
+    font-family: 'Roc Grotesk';
+}
+
+#portfolio a.job-img-1 {
+    position: sticky;
+    top: 20px;
+    height: max-content;
+}
+
+#portfolio a.job-img-3 {
+    position: sticky;
+    top: 140px;
+    z-index: 1;
+}
+
+#portfolio a.job-img-4 {
+    position: sticky;
+    top: 160px;
+    z-index: 1;
+}
+
+#portfolio a.job-img-5 {
+    position: sticky;
+    top: 180px;
+    z-index: 1;
+}
+
+#portfolio a.job-img-6 {
+    position: sticky;
+    top: 200px;
+    z-index: 1;
+}
+
+#portfolio a.job-ecandle {
+    position: sticky;
+    top: 40px;
+    z-index: 1;
+}
+
+#portfolio a.job-tiger {
+    position: sticky;
+    top: 60px;
+    z-index: 1;
+}
+
+#portfolio a.job-gordices {
+    position: sticky;
+    top: 80px;
+    z-index: 1;
+}
+
+#portfolio a.job-phyto {
+    position: sticky;
+    top: 100px;
+    z-index: 1;
+}
+
+#portfolio a.job-bebop {
+    position: sticky;
+    top: 120px;
+    z-index: 1;
+}
+
+#portfolio img {
+    max-width: 100%;
+    padding: 30px 0;
+}
+
+#portfolio .portfolio-content .job-info .more-job {
+    font-family: 'Roc Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #B5BDD6;
+    padding-top: 30px;
+    position: relative;
+    top: 20px;
+}
+
+#portfolio .portfolio-content .job-info .more-job:hover{
+    content: '';
+    color: #ffffff;
+}
+
+#portfolio .portfolio-content .job-info .more-job::after {
+    content: '';
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+#portfolio .portfolio-content .job-info .more-job:hover::after {
+    content: '\f061';
+    font-family: 'Font Awesome 5 Free';
+    margin-left: 20px;
+    color: #fff;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+/* Portfólio slider */
+
+
+
+/*---------------------------------- Sobre */
+
+#sobre .sobre-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sobre .sobre-conteudo {
+    flex: 1;
+}
+
+#sobre .sobre-foto {
+    display: flex;
+    justify-content: end;
+    flex: 1;
+}
+
+#sobre .sobre-conteudo h1{
+    font-family: "Breve News";
+    font-size: 48px;
+    color: #E6F1FF;
+    font-weight: 600;
+}
+
+#sobre .sobre-conteudo span{
+    color: #E94F40;
+}
+
+#sobre .sobre-conteudo p{
+    padding-top: 36px;
+    font-size: 18px;
+    line-height: 27px;
+    color: #515A75;
+    font-family: 'Roc Grotesk';
+}
+
+#sobre .minha-foto-img {
+    width: auto;
+    margin-top: -40px;
+}
+
+#sobre .foto-mobile {
+    display: none;
+}
+
+#sobre .sobre-foto .roda-ecandle {
+    position: absolute;
+    animatiofn: rotation 20s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+/* Slider serviços */
+
+#slider {
+    padding: 160px 0 120px 0;
+}
+
+.slider-box {
+    width: 100%;
+    background-color: rgba(172,181,210,0.01);
+    border: 1px solid rgba(172,181,210,0.15);
+    border-left: none;
+    border-right: none;
+    overflow: hidden;
+    transform: translate(0px, 0px);
+}
+
+.slider-box-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+
+    white-space: nowrap;
+    -webkit-animation: slider-text 20s linear infinite alternate;
+    animation: slider-text 40s linear infinite alternate;
+}
+
+@keyframes slider-text {
+    0% {transform: translate3d(0, 0, 0);}
+    100% {transform: translate3d(-2700px, 0, 0);}
+}
+
+
+.slider-box-slide {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 24px 0;
+}
+
+.slider-box-slide p {
+    display: block;
+    width: max-content;
+    font-family: 'Roc Grotesk';
+    color: #B6BFDA;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.slider-box-slide svg {
+    width: 32px;
+    height: 32px;
+    min-width: 20px;
+    margin: 0 48px;
+}
+
+#slider .shadows { 
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+/*---------------------------------- Autoridade */
+
+#autoridade .autoridade-box {
+    padding: 20px 0 200px 0;
+}
+
+#autoridade h1 {
+    font-family: "Breve News";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 80px;
+    text-align: center;
+    color: #fff;
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgba(92, 92, 92, 0.295));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+#autoridade ul {
+    padding-top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#autoridade ul li{
+    flex: 1 1 260px;
+}
+
+#autoridade ul li{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1 1 300px;
+}
+
+#autoridade ul li p{
+    padding-top: 24px;
+    color: #515A75;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-family: 'Roc Grotesk';
+}
+
+#autoridade ul li p.text-2{
+    margin: 0 60px;
+}
+
+#autoridade ul li p.text-3{
+    margin: 0 40px;
+}
+
+#autoridade svg {
+    animation: textAnimate;
+}
+
+@keyframes textAnimate {
+    0% {
+        stroke-dasharray: 0 50%;
+    }
+
+    100% {
+        stroke-dasharray: 50% 0;
+    }
+}
+
+/*---------------------------------- Contato */
+
+#contato {
+    padding: 161px 0 142px 0;
+    background: linear-gradient(270deg, #171B26 15.76%, #545D77 272.07%);
+}
+
+#contato .contato-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#contato .contato-container .c-item {
+    flex: 2 1 260px;
+}
+
+#contato .contato-info p.hat {
+    color: #E2E2E2;
+    font-size: 10px;
+    font-weight: 600;
+    font-family: 'Roc Grotesk';
+    padding-bottom: 20px;
+}
+
+#contato .contato-info h1 {
+    font-family: 'Breve News';
+    font-size: 48px;
+    color: #E6F1FF;
+    font-weight: bold;
+    padding-bottom: 33px;
+}
+
+#contato .contato-info p.cta {
+    color: #5D6478;
+    padding-bottom: 57px;
+    font-family: 'Roc Grotesk';
+    font-size: 18px;
+    letter-spacing: -0.05em;
+    line-height: 27px;
+    padding-right: 90px;
+}
+
+#contato .contato-info p.cta span {
+    color: #E94F40;
+}
+
+
+#contato .contato-info a {
+    display: block;
+    width: max-content;
+    font-family: 'Roc Grotesk';
+    background-color: #e94e401c;
+    font-size: 12px;
+    font-weight: 600;
+    color: #E94F40;
+    border: #e94e403f 1px solid;
+    padding: 17px 22px;
+    
+    transition: .5s ease;
+}
+
+#contato .contato-info a:hover {
+    background-color: #E94F40;
+    color: #ffffff;
+    border: #E94F40 1px solid;
+}
+
+#contato .contato-logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+}
+
+#contato .contato-logo .logo-ecandle-footer {
+    width: 100%;
+    height: auto;
+}
+
+/*---------------------------------- Footer */
+
+footer {
+    background-color: #111520;
+}
+
+footer a img.logo-ecandle {
+    width: 30px;
+    height: auto;
+}
+
+footer .logo-footer a{
+    margin-right: 20px;
+}
+
+footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+footer p {
+    color: #B5BDD6;
+    font-family: 'Roc Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: end;
+}
+
+footer .logo-footer {
+    width: 20%;
+}
+
+footer .direiros-footer {
+    width: 70%;
+}
+
+footer .arrow-footer {
+    width: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+/*---------------------------------- Media Query */
+
+@media (max-width: 960px) {
+
+    body { 
+        width: 100%;
+    }
+
+    #autoridade ul li{
+        padding: 20px 0;
+    }
+
+    footer .logo-footer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer .logo-footer a{
+        display: block;
+        text-align: center;
+    }
+
+    footer .direiros-footer {
+        width: 100%;
+    }
+
+    footer .direiros-footer p{
+        text-align: center;
+    }
+
+    footer .arrow-footer {
+        width: 100%;
+    }
+
+    footer .arrow-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .f-item {
+        padding: 14px 0;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    #autoridade h1 {
+        font-family: "Breve News";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 60px;
+        text-align: initial;
+        color: #fff;
+        background: -webkit-linear-gradient(rgb(255, 255, 255), rgba(92, 92, 92, 0.295));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+    }
+
+    #autoridade .autoridade-box {
+        padding: 120px 0;
+    }
+
+    #sobre .minha-foto-img {
+        margin-top: 20px;
+    }
+
+    #sobre .minha-foto-img {
+        margin: 30px auto 20px auto;
+    }
+
+    #autoridade ul {
+        padding: 40px 0 0 0;
+    }
+
+    #autoridade ul li {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    #autoridade ul li p.text-2 {
+        margin: 0;
+    }
+
+    #autoridade ul li p {
+        padding-top: 24px;
+        color: #515A75;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: initial;
+        font-family: 'Breve News';
+    }
+
+    #autoridade ul li p.text-3 {
+        margin: 0;
+    }
+
+    #contato > div > div.c-item.contato-logo > div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 70px;
+    }
+
+    #contato {
+        padding: 120px 0 120px 0;
+    }
+
+    #hero h1 {
+        font-size: 56px;
+    }
+
+    #hero h2 {
+        font-size: 40px;
+    }
+
+    #hero .btn-cta {
+        padding: 60px 0 0 0;
+    }
+
+    #hero .hero-content {
+        padding-top: 70px;
+    }
+
+    #hero .hero-content .elipse {
+        display: none;
+    }
+
+    #header .box-logo{
+        width: 50%;
+    }
+
+    header nav.nav-nav-menu{
+        width: 50%;
+        display: none;
+    }
+
+    header .menu-burger {
+        display: block;
+    }
+
+    header .header-container {
+        padding: 20px;
+    }
+
+    #header .box-logo a{
+        width: 100%;
+        display: block;
+        text-align: initial;
+    }
+
+    header nav .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header li a {
+        font-size: 12px;
+    }
+
+    header ul li {
+        padding-top: 16px;
+        margin-left: 0px;
+    }
+
+    #portfolio .portfolio-content {
+        padding: 120px 0 120px 0;
+    }
+
+    #portfolio a.job-img-1 {
+        top: 140px;
+    }
+
+    #portfolio a.job-img-3 {
+        top: 180px;
+    }
+
+    #portfolio a.job-img-4 {
+        top: 220px;
+    }
+
+    #portfolio a.job-img-5 {
+        top: 260px;
+    }
+    #portfolio a.job-img-6 {
+        top: 300px;
+    }
+
+    #contato .contato-info p.cta {
+        padding-right: 0px;
+    }
+
+    #slider {
+        padding: 100px 0 0 0;
+    }
+
+    #sobre .foto-mobile {
+        display: block;
+        margin: 0 auto;
+        padding: 50px 0 0 0;
+    }
+
+    #sobre .minha-foto-img {
+        display: none;
+    }
+    
+    #sobre .sobre-foto .roda-ecandle {
+        display: none;
+    }
+}
